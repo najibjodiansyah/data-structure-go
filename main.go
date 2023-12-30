@@ -3,19 +3,26 @@ package main
 import (
 	"fmt"
 
-	"github.com/najibjodiansyah/data-structure-go/ds"
+	ds "github.com/najibjodiansyah/data-structure-go/ds"
 )
 
 func main() {
-	newArray := ds.NewDynamycArray()
-	newArray.Push("hi")
-	newArray.Push("you")
-	newArray.Push("!")
-	newArray.Delete(0)
-	newArray.Delete(1)
-	newArray.Print()
-	fmt.Println(reverseString2("najib"))
-	fmt.Println(mergeSortArray([]int{0, 3, 4, 31}, []int{4, 6, 30}))
+	// newArray := ds.NewDynamycArray()
+	// newArray.Push("hi")
+	// newArray.Push("you")
+	// newArray.Push("!")
+	// newArray.Delete(0)
+	// newArray.Delete(1)
+	// newArray.Print()
+	// fmt.Println(reverseString2("najib"))
+	// fmt.Println(mergeSortArray([]int{0, 3, 4, 31}, []int{4, 6, 30}))
+
+	myHashTable := ds.NewHashTable(5)
+	myHashTable.Set("grapes", 10000)
+	myHashTable.Set("apples", 9)
+	myHashTable.Set("oranges", 2)
+	fmt.Println(myHashTable)
+	fmt.Println(myHashTable.Get("oranges"))
 }
 
 func reverseString1(str string) string {
